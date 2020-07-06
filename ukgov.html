@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type= "text/css" rel="stylesheet" href="mygov.css">
+
+    <title>British Government</title>
+  </head>
+  <body>
+
+    <div class="w3-container">
+      <div id="ukgovlogo">
+      <a href="https://www.gov.uk/">  <img src="gov.png"></a>
+    </div>
+
+
+      <div id="yellow-line"></div>
+      <div id="Home"><a href="https://www.gov.uk/">Home</a></div>
+      <div id="coro">Coronavirus (COVID‑19)</div>
+
+
+</div>
+
+
+      <div class="second_session">
+        <h3> Stay alert </h3>
+        <p>We can all help control the virus if we all stay alert. This means you must:</p>
+        <uo>
+          <li>stay at home as much as possible</li>
+            <li>work from home if you can</li>
+              <li>limit contact with other people</li>
+                <li>keep your distance if you go out</br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;(2 metres apart where possible)</li>
+                  <li>wash your hands regularly</li>
+        </uo>
+        <p> Do not leave home if you or anyone in your household has symptoms.</p>
+
+        </div>
+
+        <div id="third_session">
+          <h1> Social Distancing </h1>
+          </div>
+          <h2 id="test">Are you currently inside?</h2>
+
+          <div class="button-div">
+              <button id="first-yes-button">YES</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+              <button id="first-no-button">NO</button>
+          </div>
+
+
+          <div class="question-box" id="question-box-1">
+              <h3> Are you having high temperature? i.e you feel hot to touch on your chest or back? </h3>
+
+
+              <div class="button-div">
+                  <button id="second-yes-button">YES</button>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <button id="second-no-button">NO</button>
+              </div>
+          </div>
+
+
+          <div class="question-box" id="question-box-2">
+              <h3> Do you have a new or continuous cough?</h3>
+
+
+              <div class="button-div">
+                  <button id="third-yes-button">YES</button>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <button id="third-no-button">NO</button>
+              </div>
+          </div>
+
+
+          <div class="question-box" id="question-box-3">
+              <h3> Have you loss or change to your sense of smell or taste ?</h3>
+
+              <div class="button-div">
+                  <button id="fourth-yes-button">Yes</button>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                   <button id="fourth-no-button">No</button>
+              </div>
+          </div>
+
+
+          <div class="question-box" id="question-box-4">
+
+              <div class="button-div">
+                  <button id="fifth-yes-button">Check Result </button>
+              </div>
+          </div>
+
+          <div class="question-box" id="question-box-5">
+
+              <div class="button-div">
+                  <button id="fifth-no-button">Check Result </button>
+              </div>
+          </div>
+
+
+
+
+
+
+
+
+          <div id="message1"></div>
+
+          <a id="link" href="https://www.nhs.uk/conditions/coronavirus-covid-19/staying-at-home-to-avoid-getting-coronavirus/staying-at-home-and-away-from-other-people/">Read
+            NHS advice</a>
+
+
+
+
+
+
+
+          <script>
+          //Declare All Buttons to be used.
+          let firstYesButton = document.getElementById("first-yes-button");
+          let firstNoButton = document.getElementById("first-no-button");
+
+          let firstQuestionBox = document.getElementById("question-box-1");
+          let secondYesButton = document.getElementById("second-yes-button");
+          let secondNoButton = document.getElementById("second-no-button");
+
+          let secondQuestionBox = document.getElementById("question-box-2");
+          let thirdYesButton = document.getElementById("third-yes-button");
+          let thirdNoButton = document.getElementById("third-no-button");
+
+          let thirdQuestionBox = document.getElementById("question-box-3");
+          let fourthYesButton = document.getElementById("fourth-yes-button");
+          let fourthNoButton = document.getElementById("fourth-no-button");
+
+          let fourthQuestionBox = document.getElementById("question-box-4");
+          let fifthQuestionBox = document.getElementById("question-box-5");
+          let fifthYesButton = document.getElementById("fifth-yes-button");
+          let fifthNoButton = document.getElementById("fifth-no-button");
+
+          let message = document.getElementById("message1");
+          //******************* MODAL BOX************************************************
+            let modal = document.getElementById("myModal");
+            var span = document.getElementsByClassName("close")[0];
+            let Btn =  document.getElementById("ok_btn");
+            let message1 = document.getElementById("message1");
+
+          //******************* MODAL BOX END************************************************
+
+
+          firstYesButton.onclick = () =>
+          {
+          message.style.display = "block";
+          message.innerHTML = "Thank you for helping our key-workers during this difficult period. Please stay safe, covid is real.";
+          firstQuestionBox.style.display = "none";
+          secondQuestionBox.style.display = "none";
+          thirdQuestionBox.style.display = "none";
+          fourthQuestionBox.style.display = "none";
+          fifthQuestionBox.style.display = "none";
+        }
+
+
+
+          firstNoButton.onclick = () =>
+          {
+             firstQuestionBox.style.display="block";
+             message.style.display = "none";
+          }
+
+          //************************************************************************
+
+          secondYesButton.onclick = () =>{
+            message.style.display = "none";
+            firstQuestionBox.style.display="block";
+            secondQuestionBox.style.display = "block";
+          }
+
+          secondNoButton.onclick = () =>{
+            message.style.display = "none";
+            firstQuestionBox.style.display="block";
+            secondQuestionBox.style.display = "block";
+          }
+
+         //************************************************************************
+
+         thirdYesButton.onclick = () =>{
+           message.style.display = "none";
+           firstQuestionBox.style.display="block";
+           secondQuestionBox.style.display = "block";
+           thirdQuestionBox.style.display = "block";
+           fourthQuestionBox.style.display = "none";
+         }
+
+         thirdNoButton.onclick = () =>{
+           message.style.display = "none";
+           firstQuestionBox.style.display="block";
+           secondQuestionBox.style.display = "block";
+           thirdQuestionBox.style.display = "block";
+           fourthQuestionBox.style.display = "none";
+         }
+         //************************************************************************
+
+         fourthYesButton.onclick = ()=>
+         {
+           message.style.display = "none";
+           firstQuestionBox.style.display="block";
+           secondQuestionBox.style.display = "block";
+           thirdQuestionBox.style.display = "block";
+           fourthQuestionBox.style.display = "block";
+           fifthQuestionBox.style.display = "none";
+           fourthNoButton.disabled = true;
+         }
+
+         fourthNoButton.onclick = ()=>
+         {
+           fifthQuestionBox.style.display = "block";
+           fourthYesButton.disabled = true;
+         }
+
+    //*************************** COVID YES *************************************************
+
+         fifthYesButton.onclick = ()=>
+         {
+           alert("From the answers provided,it shows that you may have been exposed to the virus.Please arrange for test.");
+
+         }
+    //*************************** COVID YES *************************************************
+    fifthNoButton.onclick = ()=>
+    {
+      alert("From the answers provided,it shows that you do not have the virus. Please try and stay safe.");
+
+    }
+
+          </script>
+
+          <footer>
+           <div id="foot"> Designed by: pencoedtechnology</br>
+             <a href="pencoedtechnology@gmail.com">Pencoed Technology</a>
+           </div>
+          </footer>
+
+
+
+
+
+  </body>
+</html>
